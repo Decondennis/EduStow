@@ -3,7 +3,7 @@ import axios from "axios";
 import { useForm } from 'react-hook-form';
 import { Alert } from 'react-bootstrap';
 import { NavLink } from "react-router-dom";
-// import "./MyForm.css";
+
 
 export default function Contact() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm();
@@ -20,7 +20,7 @@ export default function Contact() {
     try {
       await axios.post('http://localhost:5000/contacts', data);
       reset();
-      setShowAlert(true); // set showAlert to true after successful POST request
+      setShowAlert(true); 
     } catch (error) {
       console.error(error);
     } finally {

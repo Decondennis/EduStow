@@ -1,6 +1,4 @@
 import React from "react";
-// import '../css/bootstrap.min.css';
-// import '../css/style.css';
 import about1 from '../img/about-1.jpg';
 import about2 from '../img/about-2.jpg';
 import Footer from "./Footer";

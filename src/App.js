@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div>
       <Router>
-        <HeaderH /> {/* Header component */}
+        <HeaderH />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
@@ -37,7 +37,7 @@ export default function App() {
           <Route path="/ForgotPassword" element={<ForgotPassword />} />
           <Route path="/Missing" element={<Missing />} />
         </Routes>
-        <Footer /> {/* Footer component */}
+        <Footer /> 
       </Router>
     </div>
   );

@@ -18,7 +18,7 @@ export default function Footer() {
 	  try {
 		await axios.post('http://localhost:5000/newsletter', data);
 		reset();
-		setShowAlert(true); // set showAlert to true after successful POST request
+		setShowAlert(true); 
 	  } catch (error) {
 		console.error(error);
 	  } finally {

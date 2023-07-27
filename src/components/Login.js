@@ -16,9 +16,9 @@ const Login = () => {
   const onSubmit = async (data) => {
     try {
       const { email, password } = data;
-      setError(''); // Clear any previous error
+      setError(''); 
   
-      // Make a POST request to the server to perform login
+      
       const response = await axios.post('http://localhost:5000/login', {
         email,
         password,
@@ -26,28 +26,27 @@ const Login = () => {
   
       const { token, role } = response.data;
   
-      // Save the JWT token to localStorage or a secure storage solution
+      
       localStorage.setItem('token', token);
   
       if (role === 'admin') {
         console.log('Admin login successful');
-        navigate('/AdminDashboard'); // Redirect to the admin dashboard page
+        navigate('/AdminDashboard'); 
       } else if (role === 'user') {
         console.log('User login successful');
-        navigate('/UserTransactionHistory'); // Redirect to the user dashboard page
+        navigate('/UserTransactionHistory'); 
       } else {
         console.log('Invalid role');
-        // Handle the case of an unknown or invalid role
+        
       }
     } catch (error) {
       console.error(error);
-      setError('Failed to login. Please check your credentials.'); // Set the error message
+      setError('Failed to login. Please check your credentials.'); 
     }
   };
   
 
   const handleForgotPassword = () => {
-    // Redirect to the forgot password page
     navigate('/ForgotPassword');
   };
 

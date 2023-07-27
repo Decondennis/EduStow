@@ -21,7 +21,7 @@ const EditContact = () => {
         await axios.patch(`http://localhost:5000/contacts/${id}`, formData);
 
         reset();
-        setShowAlert(true); // set showAlert to true after successful POST request
+        setShowAlert(true); 
       } catch (error) {
         console.error(error);
       } finally {

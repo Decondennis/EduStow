@@ -7,9 +7,7 @@ const ForgotPassword = () => {
   const navigate = useNavigate();
 
   const onSubmit = (data) => {
-    // Perform forgot password logic here
     console.log('Reset password email sent to:', data.email);
-    // Perform any other actions, such as displaying a success message
   };
 
   const handleGoBack = () => {
