@@ -1,0 +1,94 @@
+# Refined Modern Logo Generator
+# Creates an executive-grade, ultra-clean educational emblem and logotype
+
+SVG_FAVICON = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A202C" />
+      <stop offset="100%" stop-color="#0B0F17" />
+    </linearGradient>
+
+    <!-- Golden Warmth Gradient -->
+    <linearGradient id="goldPage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF59D" />
+      <stop offset="35%" stop-color="#FFE468" />
+      <stop offset="85%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Emerald Growth Gradient -->
+    <linearGradient id="greenPage" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#BEF264" />
+      <stop offset="40%" stop-color="#8CC641" />
+      <stop offset="100%" stop-color="#4D7C0F" />
+    </linearGradient>
+
+    <!-- Crown Cap Gradient -->
+    <linearGradient id="capGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9C2" />
+      <stop offset="50%" stop-color="#FFE468" />
+      <stop offset="100%" stop-color="#EAB308" />
+    </linearGradient>
+
+    <!-- Outer Border Glow -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE468" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#8CC641" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.8" />
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <filter id="glowGold" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#F59E0B" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <!-- Premium Squircle Container -->
+  <rect x="6" y="6" width="116" height="116" rx="32" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="2.5" />
+
+  <!-- Inner Ambient Glow Ring -->
+  <rect x="10" y="10" width="108" height="108" rx="28" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1.5" />
+
+  <g filter="url(#shadow)">
+    <!-- 1. The Graduation Mortarboard / Academic Diamond Crest -->
+    <!-- Diamond Top -->
+    <path d="M64 24 L94 38 L64 52 L34 38 Z" fill="url(#capGrad)" filter="url(#glowGold)"/>
+    
+    <!-- Cap Rim / 3D Base -->
+    <path d="M48 45.5 L64 53 L80 45.5 V52 C80 57.5 73 61 64 61 C55 61 48 57.5 48 52 Z" fill="#B45309" />
+    
+    <!-- Academic Tassel (Draping on right) -->
+    <path d="M88 41 C90 46 91 53 91 60" fill="none" stroke="#8CC641" stroke-width="3" stroke-linecap="round" />
+    <circle cx="91" cy="62" r="3.2" fill="#8CC641" />
+
+    <!-- 2. The Soaring Knowledge Book Pages (Curved Wings) -->
+    <!-- Left Wing / Page (Gold / Yellow) -->
+    <path d="M60 67 C48 62 34 64 24 71 C23.5 71.5 23 72.5 23 73.5 L23 88 C23 89.2 24.2 90 25.5 89.5 C35 84.5 48 83 60 87 Z" 
+          fill="url(#goldPage)" />
+
+    <!-- Right Wing / Page (Emerald Lime Green) -->
+    <path d="M68 67 C80 62 94 64 104 71 C104.5 71.5 105 72.5 105 73.5 L105 88 C105 89.2 103.8 90 102.5 89.5 C93 84.5 80 83 68 87 Z" 
+          fill="url(#greenPage)" />
+
+    <!-- 3. Central Spine Beam / Foundation of Light -->
+    <path d="M62.5 64.5 C62.5 63.5 65.5 63.5 65.5 64.5 L65.5 89.5 C65.5 90.5 62.5 90.5 62.5 89.5 Z" 
+          fill="#FFFFFF" />
+
+    <!-- Base Horizon Glow Accent -->
+    <ellipse cx="64" cy="99" rx="20" ry="2.5" fill="#FFE468" fill-opacity="0.3" />
+  </g>
+</svg>
+"""
+
+with open("public/favicon.svg", "w", encoding="utf-8") as f:
+    f.write(SVG_FAVICON)
+
+with open("public/edustow-mark.svg", "w", encoding="utf-8") as f:
+    f.write(SVG_FAVICON)
+
+print("Favicon & Mark SVG created.")
